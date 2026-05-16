@@ -1,18 +1,23 @@
-@media (min-width: 768px) {
-
-    /* NAV becomes horizontal */
-    nav {
-        display: flex !important;
-        flex-direction: row;
-        gap: 1rem;
-    }
+@media screen and (min-width: 768px) {
 
     #menuBtn {
         display: none;
     }
 
-    /* GRID becomes multi-column */
-    .grid {
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 }

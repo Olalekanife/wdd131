@@ -1,15 +1,19 @@
-const menuBtn = document.getElementById('menuBtn');
-const navMenu = document.getElementById('navMenu');
+const menuBtn = document.querySelector('#menuBtn');
+const navMenu = document.querySelector('#navMenu');
 
 menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 
-    // optional UX upgrade: change icon
-    menuBtn.textContent = navMenu.classList.contains('show') ? '✖' : '☰';
+    if (navMenu.classList.contains('show')) {
+        menuBtn.textContent = '✖';
+    } else {
+        menuBtn.textContent = '☰';
+    }
 });
 
-// footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+/* Footer */
 
-// last modified
-document.getElementById('modified').textContent = document.lastModified;
+document.querySelector('#year').textContent = new Date().getFullYear();
+
+document.querySelector('#lastModified').textContent =
+    `Last Modified: ${document.lastModified}`;
