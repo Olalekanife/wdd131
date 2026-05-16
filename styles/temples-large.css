@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+
+    /* NAV becomes horizontal */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    /* GRID becomes multi-column */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
