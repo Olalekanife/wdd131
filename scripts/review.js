@@ -1,14 +1,12 @@
-/* LOCAL STORAGE COUNTER */
+let reviewCount =
+    Number(localStorage.getItem("reviewCount")) || 0;
 
-let reviews = Number(localStorage.getItem("reviews")) || 0;
+reviewCount++;
 
-reviews++;
+localStorage.setItem("reviewCount", reviewCount);
 
-localStorage.setItem("reviews", reviews);
-
-document.querySelector("#reviewCount").textContent = reviews;
-
-/* FOOTER */
+document.querySelector("#reviewCount").textContent =
+    reviewCount;
 
 document.querySelector("#year").textContent =
     new Date().getFullYear();

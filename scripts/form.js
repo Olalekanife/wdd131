@@ -40,7 +40,6 @@ products.forEach(product => {
 
 });
 
-/* FOOTER */
 document.querySelector("#year").textContent =
     new Date().getFullYear();
 
