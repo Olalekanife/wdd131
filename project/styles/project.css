@@ -1,0 +1,83 @@
+:root {
+    --primary: #5c3d2e;
+    --secondary: #d4a373;
+    --light: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.cards {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+}
+
+input[type="submit"] {
+    background: var(--secondary);
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+}
+
+@media(min-width:768px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
